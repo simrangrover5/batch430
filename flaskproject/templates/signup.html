@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        {% include "nav.html" %}
+        {% block head %}
+        {% endblock %}
+        <h1 style="color:red">{{ error }}</h1>
+        <form method="POST" action="/signup1/" enctype="multipart/form-data">
+            <p>Enter your name : </p>
+            <input type="text" name="name"><br>
+            <p>Enter your email : </p>
+            <input type="email" name="email"><br>
+            <p>Enter your password : </p>
+            <input type="password" name="pswd"><br>
+            <p>Gender : </p>
+            <input type="radio" name="gender" value="male">MALE<input type="radio" name="gender" value="female">FEMALE<br>
+            <input type="file" name="myfile"><br>
+            <input type="submit" value="SIGNUP">
+        </form>
+    </body>
+</html>

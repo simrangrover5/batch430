@@ -1,0 +1,14 @@
+li{
+    display: inline;
+    padding:20px;
+    
+}
+a{
+    text-decoration: none;
+    font-style: italic;
+    font-size:30px;
+}
+div{
+    float: right;
+    background-color: black;
+}

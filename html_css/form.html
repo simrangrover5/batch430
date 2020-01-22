@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>My form</title>
+        <style>
+            label{
+                color: black;
+                font-size: 30px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-style: italic;
+            }
+            #sub{
+                height: 15%;
+                width: 15%;
+                background: black;
+                color: white;
+                font-style: italic;
+            }
+            div{
+                height: 60%;
+                width:50%;
+                border:solid 2px red;
+                margin-left: 10%;
+                margin-top: 10%;
+            }
+            form{
+                padding-left: 6%;
+            }
+        </style>
+
+    </head>
+    <body style="background: linear-gradient(to right,#F1C40F,#888269);">
+        <div>
+        <form method="POST" action="one.html">
+            <label>Enter you name : </label><br>
+            <input type="text" name="name"><br>
+            <label>Enter your email : </label><br>
+            <input type="email" name="email"><br>
+            <label>Enter your password : </label><br>
+            <input type="password" name="pswd"><br>
+            <input type="radio" name="gender" value="male">MALE<input type="radio" name="gender" value="female">FEMALE<br>
+            <input type="submit" value="SUBMIT" id="sub">
+        </form>
+        </div>
+    </body>
+</html>

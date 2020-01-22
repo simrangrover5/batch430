@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        <p style="color: cadetblue;font-size: 30px;" id="p"></p>
+        <input type="text" id="id1">
+        <button onclick="submit()">SUBMIT</button>
+        <script>
+            //var a = 10;
+            //var b = 20;
+            var c = "simran"
+            //document.write(a+b);
+            //document.write("<br>");
+            //document.write(b+c+a);
+            function submit(){
+                
+               var name =  document.getElementById("id1").value;
+               document.getElementById("p").innerHTML = "Welcome "+ name
+            }
+        </script>
+    </body>
+</html>

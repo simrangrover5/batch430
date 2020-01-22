@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            p{
+                color: cornflowerblue;
+                font-size: 40px;
+            }
+        </style>
+
+    </head>
+    <body style="background: black;">
+        <p>This is paragraph tag in html page</p>
+        <h1 style="color: chocolate;">Welcome {{ n }}</h1>
+        <a href="/logout/">LOGOUT</a>
+        {% if a %}
+        {% if a>=18 %}
+        <h1 style="color:chocolate">{{ n }} can vote</h1>
+        {% else %}
+        <h1 style="color:chocolate">{{ n }} cannot vote</h1>
+        {% endif %}
+        {% if data %}
+        {% for key,value in data.items() %}
+        <h1 style="color: chocolate;">{{ key }}={{ value }}</h1>
+        {% endfor %}
+        {% endif %}
+        {% endif %}
+    </body>
+</html>

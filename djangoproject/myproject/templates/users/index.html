@@ -1,0 +1,35 @@
+{% block head %}
+<html>
+    <head>
+        <title>NavBar</title>
+        <style>
+            li{
+                display: inline;
+                padding:20px;
+    
+            }
+    a{
+        text-decoration: none;
+        font-style: italic;
+        font-size:30px;
+    }
+    div{
+        float: right;
+        background-color: black;
+    }
+    </style>
+
+
+    </head>
+    <body style="background: linear-gradient(to right,#F1C40F,#888269);">
+        <div>
+        <ul>
+            <li><a href="/users/">HOME</a></li>
+            <li><a href="/users/login/">LOGIN</a></li>
+            <li><a href="#">SIGNUP</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        </div>
+    </body>
+</html>
+{% endblock %}
