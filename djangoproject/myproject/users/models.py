@@ -6,3 +6,6 @@ class Adduser(models.Model):
     email = models.EmailField(max_length=100,primary_key=True)
     password = models.CharField(max_length=100)
     pic = models.ImageField()
+
+    def __str__(self):
+        return f"{self.username}"

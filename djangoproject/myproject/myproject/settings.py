@@ -75,10 +75,18 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+#create database signup character set 'utf8' -->to create database at mysql
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME' : 'signup',   #database name
+        'HOST' : 'localhost',
+        'PORT' : 3306,
+        'USER' : 'root',
+        'PASSWORD' : ""
     }
 }
 
