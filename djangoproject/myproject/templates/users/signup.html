@@ -12,7 +12,8 @@
         {% include 'users/index.html' %}
         {% block head %}
         {% endblock %}
-        <form method="POST" action="/users/afterlogin/">
+        <h1 style="color:red">{{ error }}</h1>
+        <form method="POST" action="/users/aftersign/" enctype="multipart/form-data">
             {% csrf_token %}
             {{ f.as_p }}
             <input type="submit" value="Signup">
