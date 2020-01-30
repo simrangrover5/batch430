@@ -13,8 +13,9 @@ def index(request):
 
 def login(request):
     if request.session.get('email'):
-        return HttpResponse("""
-                <a href='/users/logout/'>LOGOUT</a>""")
+        #return HttpResponse("""
+                #<a href='/users/logout/'>LOGOUT</a>""")
+        return render(request,"users/login1.html")
     else:
         form = Login()
         return render(request,"users/login.html",{'f':form})
@@ -33,8 +34,9 @@ def afterlogin(request):
         else:
             if password == obj.password:
                 request.session['email'] = email
-                return HttpResponse("""Email : {} and password {}
-                <a href='/users/logout/'>LOGOUT</a>""".format(email,password))
+                #return HttpResponse("""Email : {} and password {}
+                #<a href='/users/logout/'>LOGOUT</a>""".format(email,password))
+                return render(request,"users/login1.html")
             else:
                 error = "Invalid password"
                 form = Login()

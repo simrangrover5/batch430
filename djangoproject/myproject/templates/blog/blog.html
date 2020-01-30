@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <style>
+            p{
+                color:'blue';
+                font-size: 40px;
+            }
+        </style>
+
+    </head>
+    <body>
+        {% include 'users/login1.html' %}
+        {% block login %}
+        {% endblock %}
+        <h1 style="color: red;">{{ error }}</h1>
+        <form method="POST" action="/blog/addblog1/">
+            {% csrf_token %}
+            {{ f.as_p }}
+            <input type="submit" value="SUBMIT">
+        </form>
+    </body>
+</html>

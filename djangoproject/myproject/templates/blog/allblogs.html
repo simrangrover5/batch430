@@ -1,0 +1,14 @@
+<html>
+    <head></head>
+    <body>
+        {% include 'users/login1.html' %}
+        {% block login %}
+        {% endblock %}
+        {% for i in data %}
+        <h1>{{ i.title }}</h1>
+        <p>{{i.post}}</p>
+        <h4>{{i.author}}</h4>
+        <br>
+        {% endfor %}
+    </body>
+</html>
