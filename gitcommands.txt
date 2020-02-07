@@ -1,0 +1,78 @@
+1. git --version #see the version of git
+
+2. git init #to intialize git
+	#it will create .get repo in the working directory
+	#if you remove this file..it will stop tracking the versions of file	
+
+3. git add .  #add every changed file to the version
+
+4. git commit -m "message"  #commit the changes 
+
+5. git log   #will show the log of commit 
+
+6. git help command_name #to have help for any command
+
+7. git log -n 1 #to see the first commit
+
+8. git log --since=2019-06-15   #since that date all the commit
+
+9. git log --until=2019-06-15
+
+10. git log --author="simran"  #to have commit by this author
+
+11. git log --grep="init"
+
+12. git status   #to check the status of files
+
+13. git diff   #to check the difference between the versions
+
+14. git checkout -- filename  #to undo the changes of particular file  
+    git checkout -- index.html
+
+
+
+Branching
+
+
+1. git branch  #show all branches 
+
+2. cat .git/HEAD   #will show the pointer to head
+
+3. git branch new_branch   #to create new branch 
+
+4. git checkout new_branch  #will change the branch to new_branch
+
+5. git checkout -b new_branch  #will create new_branch and switch at same time
+
+6. git diff master .. new_branch  #to show the difference between these two branches
+
+7. git branch -m old_name new_name #to rename the branch 
+
+8. git branch -d branch_name   #to delete the branch
+
+
+Remote Access
+
+1. vim readme.md    #add readme file to online repo
+
+2. git init
+
+3. git add readme.md
+
+4. git add .
+
+5. git commit -m "message"
+
+6. git remote add origin "link of repo"   
+
+7. git push origin master  #to push the file on remote repo
+
+8. git pull origin master  #to pull the file from remote repo
+
+9. git clone "url for repo"   #to clone any repo online
+
+10. git remote rm origin    #to remove origin master 
+
+
+
+

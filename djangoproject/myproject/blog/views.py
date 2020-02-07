@@ -3,6 +3,9 @@ from django.http import HttpResponse
 from .forms import Blog
 from .models import Blogadd
 from users.models import Adduser
+from rest_framework.views import  APIView
+from rest_framework.response import Response
+from .serializers import Showapi
 # Create your views here.
 
 def index(request):
@@ -41,3 +44,12 @@ def allblog(request):
         }
         allblogs.append(d)
     return render(request,"blog/allblogs.html",{'data':allblogs})
+
+class showapi(APIView):
+    def get(self,request):
+        all = Blogadd.objects.all()
+        blogs = Showapi(all,many=True)
+        return Response(blogs.data)
+
+    def post(self,request):
+        pass 
